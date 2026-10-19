@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using UnityEngine;
 
 public class BehaviourTree : Node
@@ -12,6 +13,11 @@ public class BehaviourTree : Node
     public BehaviourTree(string n)
     {
         name = n;
+    }
+
+    public override Status Process()
+    {
+        return children[currentChild].Process();
     }
 
     struct NodeLevel
