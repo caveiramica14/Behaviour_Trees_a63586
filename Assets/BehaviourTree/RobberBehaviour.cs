@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Xml;
 using UnityEngine;
 
 public class RobberBehaviour : MonoBehaviour
@@ -19,6 +18,8 @@ public class RobberBehaviour : MonoBehaviour
        steal.AddChild(goToDiamond);
        steal.AddChild(GoToVan);
        tree.AddChild(steal);
+
+       tree.PrintTree();
     }
 
     // Update is called once per frame
